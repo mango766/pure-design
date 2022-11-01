@@ -18,8 +18,29 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
+-- Table for test
+-- ----------------------------
+create table spdemo1.table_name
+(
+    username    varchar(50)  null comment '用户名',
+    password    varchar(50)  null comment '密码',
+    email       varchar(50)  null comment '邮箱',
+    phone       varchar(20)  null comment '电话',
+    address     varchar(255) null comment '地址',
+    nickname    varchar(50)  null comment '昵称',
+    create_time timestamp    null comment '创建时间',
+    id          int(20) comment 'id',
+    constraint id
+        primary key (`id`)
+);
+
+alter table spdemo1.table_name
+    modify id int(20) auto_increment comment 'id';
+    
+-- ----------------------------
 -- Table structure for article
 -- ----------------------------
+
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
